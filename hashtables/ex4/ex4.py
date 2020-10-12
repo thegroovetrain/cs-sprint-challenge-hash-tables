@@ -2,7 +2,13 @@ def has_negatives(a):
     """
     YOUR CODE HERE
     """
-    # Your code here
+    result = []
+    ht = {}
+    for val in a:
+        if (absval := abs(val)) not in ht.keys():
+            ht[absval] = 0
+        else:
+            result.append(absval)
 
     return result
 
